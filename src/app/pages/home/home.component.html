@@ -1,0 +1,52 @@
+<div class="container-fluid text-center">
+    <div class="row align-items-center">
+        <div class="col">
+
+            <div class="container">
+                <h1>Pokemon de la semana</h1>
+                <img [src]="pokemons[indexWeekPokemon].image" 
+                alt="Pokemon de la semana" 
+                style="width: 30%;">
+                <p>Descripción del pokemon</p>
+            </div>
+
+            <h1>Pokemons</h1>
+            <div class="row justify-content-center">
+                <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true" style="width: 50%;">
+                    <div class="carousel-inner">
+
+                        <div 
+                        *ngFor="let pokemon of pokemons" 
+                        [class]="pokemon.id == 1 ? 'carousel-item active' : 'carousel-item'"
+                        >
+                            <img [src]="pokemon.image" class="d-block w-100" [alt]="pokemon.name">
+                            <h5 *ngIf="pokemon.weight > 10; else elseTemplate"> El pokemon es pesado</h5>
+                            <ng-template #elseTemplate> <h5> El pokemon es liviano</h5></ng-template>
+
+                            <div [ngSwitch]="pokemon.type">
+                                <div *ngSwitchCase="1">Venom-shadow</div>
+                                <div *ngSwitchCase="2">Psychic</div>
+                                <div *ngSwitchCase="3">Electric</div>
+                                <div *ngSwitchCase="4">Psychic-fighter</div>
+                                <div *ngSwitchDefault>Unknown type</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

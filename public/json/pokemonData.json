@@ -1,0 +1,26 @@
+[
+    {"id": 1,
+      "name": "Gengar",
+      "weight": 25,
+      "type": 1,
+      "image": "assets/gengar.png"
+    },
+    {"id": 2,
+      "name": "Mewtwo",
+      "weight": 10,
+      "type": 2,
+      "image": "assets/mewtwo.png"
+    },
+    {"id": 3,
+      "name": "Raychu",
+      "weight": 8,
+      "type": 3,
+      "image": "assets/raychu.png"
+    },
+    {"id": 4,
+      "name": "Lucario",
+      "weight": 15,
+      "type": 4,
+      "image": "assets/lucario.png"
+    }
+  ]
