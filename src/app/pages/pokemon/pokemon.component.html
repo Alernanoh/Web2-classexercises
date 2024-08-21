@@ -1,1 +1,19 @@
-<p>pokemon works!</p>
+
+<div class="container-fluid text-center">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"> <a routerLink="/pokemons" routerLinkActive="router-link-active" >Pokemons</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{pokemon?.name}}</li>
+        </ol>
+      </nav>
+      
+<div class="card" style="width: 18rem;">
+    <img [src]="pokemon?.image" class="card-img-top" [alt]="pokemon?.name">
+    <div class="card-body">
+      <h5 class="card-title">{{pokemon?.name}}</h5>
+      <p class="card-text"> Weight: {{pokemon?.weight}} kg</p>
+      <a class="btn btn-primary">Show Info</a>
+    </div>
+  </div>
+</div>
