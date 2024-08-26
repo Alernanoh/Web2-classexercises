@@ -10,6 +10,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './pokemon.component.html',
   styleUrl: './pokemon.component.css'
+  
 })
 export class PokemonComponent {
   id: number = 0;

@@ -27,7 +27,7 @@ export class PokemonListComponent {
 
   onClickTable(pokemon: Pokemon): void{
     this.router.navigate(['/pokemon', pokemon.id]);
-   
+
   }
 
 }

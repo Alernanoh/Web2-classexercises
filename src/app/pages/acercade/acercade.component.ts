@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PostService } from '../../services/post/post.service';
 
 @Component({
   selector: 'app-acercade',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './acercade.component.css'
 })
 export class AcercadeComponent {
+
+  counter: number = 0;
+
+  constructor (private postService: PostService) { }
+
+  onClick(): void{
+    this.postService.changePost(`Clicks: ${++this.counter}`);
+  }
 
 }

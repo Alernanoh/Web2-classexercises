@@ -19,7 +19,6 @@ export class HomeComponent {
   pokemons: Pokemon[] = (pokemonData as any).default;
 
   indexWeekPokemon: number = randomInt(4);
-
   constructor() {}
 
   ngOnInit(): void{
